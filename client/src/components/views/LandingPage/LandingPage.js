@@ -11,7 +11,7 @@ function LandingPage() {
 
     const [Movies,setMovies] = useState([]);
     const [MainMovieImg,setMainMovieImg] = useState(null);
-    const [currentPage,setCurrentPage] = useState(0);
+    const [currentPage,setCurrentPage] = useState(0);    
 
     useEffect(() => {
        const endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=1`
@@ -22,7 +22,6 @@ function LandingPage() {
             fetch(endpoint)
             .then(res=> res.json() )
             .then(res=> {
-                console.log(res)
                 setMovies([...Movies, ...res.results])
                 if(currentPage == 0){
                 setMainMovieImg(res.results[0])
@@ -54,6 +53,7 @@ function LandingPage() {
                     {Movies && Movies.map((movie, index)=>(
                         <React.Fragment key={index}>
                             <GridCards 
+                                landingPage
                                 image={movie.poster_path
                                     ? `${IMAGE_BASE_URL}w500${movie.poster_path}`
                                     : null
