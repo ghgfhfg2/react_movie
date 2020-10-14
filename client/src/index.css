@@ -49,10 +49,9 @@ input.error {
 }
 .grid-card img{width: 100%;}
 .grid-card:hover .hover_box{opacity: 1;}
-.grid-card .no_img{}
 
 .movie_info{padding-top: 20px;display: flex;}
-.movie_info h3{font-size: 26px;}
+.movie_info h3{font-size: 26px;position: relative;}
 .movie_info h3 span{font-size: 14px;color:#999;margin-left: 7px;}
 .movie_info .img_box{margin-right: 20px;flex-shrink: 0;}
 .movie_info .txt_info{flex:1}
@@ -63,3 +62,5 @@ input.error {
   .movie_info .txt_info{order:1}
   .movie_info .img_box{order:2}
 }
+
+.movie_info .btn_favorite{position: absolute;right: 0;top:5px}

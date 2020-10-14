@@ -4,7 +4,8 @@ import { API_KEY } from '../../Config'
 import { IMAGE_BASE_URL } from '../../Config'
 import GridCards from '../commons/GridCards'
 import { Row, Button } from 'antd'
-
+import Favorite from './Favorite'
+ 
 function MovieDetail(props) {
     let movieId = props.match.params.movieId
     const [movieInfo, setMovieInfo] = useState([])
@@ -44,6 +45,7 @@ function MovieDetail(props) {
                 <div className="txt_info">
                     <h3>{movieInfo.original_title}
                         <span>{movieInfo.release_date}</span>
+                        <Favorite />                        
                     </h3>
                     <hr/>
                 </div>
