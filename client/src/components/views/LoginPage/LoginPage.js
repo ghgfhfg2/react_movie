@@ -17,7 +17,7 @@ function LoginPage(props) {
 
   const handleRememberMe = () => {
     setRememberMe(!rememberMe)
-  }
+  };
 
   const initialEmail = localStorage.getItem("rememberMe") ? localStorage.getItem("rememberMe") : '';
 
