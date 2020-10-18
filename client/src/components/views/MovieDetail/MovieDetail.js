@@ -45,7 +45,11 @@ function MovieDetail(props) {
                 <div className="txt_info">
                     <h3>{movieInfo.original_title}
                         <span>{movieInfo.release_date}</span>
-                        <Favorite />                        
+                        <Favorite 
+                            movieInfo={movieInfo}
+                            movieId={movieId}
+                            userFrom={localStorage.getItem('userId')}
+                        />                        
                     </h3>
                     <hr/>
                 </div>
